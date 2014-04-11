@@ -166,7 +166,7 @@
     get: function get(query, cb) {
       var that = this, matches = [], cacheHit = false;
 
-      matches = this.index.get(query);
+      matches = (query === '' ? this.index.all() : this.index.get(query));
       matches = this.sorter(matches).slice(0, this.limit);
 
       matches.length < this.limit ?
