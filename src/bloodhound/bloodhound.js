@@ -231,4 +231,4 @@
   }
 
   function ignoreDuplicates() { return false; }
-})(this);
+})(this || window);
